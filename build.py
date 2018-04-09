@@ -33,15 +33,17 @@ class YamlParser(Parser):
 class SwaggerDictWrapper(object):
     def __init__(self):
         self._document = {
-                "openapi": "",
+                "openapi": "3.0.0",
                 "info": "",
                 "servers": [],
                 "paths": {},
                 "components": {},
                 "security": [],
-                "externalDocs": ""
+                "externalDocs": "",
+                "tags": []
         }
         self._all_keys = list(self._document.keys())
+        self._all_keys.remove('openapi')
 
     def keys(self):
         for key in self._all_keys:
