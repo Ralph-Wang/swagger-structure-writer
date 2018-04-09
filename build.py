@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from __future__ import print_function
+
 import yaml
 import json
 import os
@@ -36,7 +38,8 @@ class SwaggerDictWrapper(object):
                 "servers": [],
                 "paths": {},
                 "components": {},
-                "security": []
+                "security": [],
+                "externalDocs": ""
         }
         self._all_keys = list(self._document.keys())
 
